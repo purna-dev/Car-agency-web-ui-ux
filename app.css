@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --barlow-font-family: 'Barlow Condensed', sans-serif;
+    --pop-font-family: 'Poppins', sans-serif;
+    --black-p: #111217;
+    --yellow-p: #ffd800;
+    --light: #c1b9ae;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-p);
+    z-index: -3;
+    overflow: hidden;
+}
+#loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light);
+    position: absolute;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+
+}
+#loader .l{
+    position: relative;
+}
+
+#loader .l .l_img{
+    width: 120px;
+    position: absolute;
+    
+    transform: translate(40%,-10%);
+    z-index: 5;
+}
+
+#loader .l .l_img img{
+    
+    width: 60%;
+    /* transform: rotate(90deg); */
+}
+#loader .l .per{
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: var(--barlow-font-family);
+    display: flex;
+    align-items: center;
+    gap:0.5rem
+
+}
+#loader .l .per .l_line{
+    /* width: 0vw; */
+    height: 5px;
+    background-color: var(--black-p);
+}
+
+
+
+
+#main {
+    padding: 1rem;
+
+
+}
+
+/* .navbar{
+    position: fixed;
+    top: -6.5rem;
+    right: -6.5rem;
+    background-color: var(--light);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: 9999;
+}
+.navbar nav ul{
+    color: #111217;
+    transform: translate(-50%,20%);
+
+} */
+.navbar nav {
+    position: relative;
+}
+
+
+.navbar nav ul .close {
+    margin-left: 14rem;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black-p);
+    transition: 0.3s;
+}
+
+.navbar nav ul .close:hover {
+    color: rgb(153, 30, 30);
+}
+
+.navbar nav ul {
+    display: none;
+    background-color: var(--light);
+    color: var(--black-p);
+    position: fixed;
+    right: -5.5rem;
+    top: -5.5rem;
+    font-family: var(--barlow-font-family);
+    padding-top: 6.5rem;
+    padding-left: 5.5rem;
+    z-index: 9999;
+
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+
+    border: 2px solid var(--yellow-p);
+
+
+
+}
+.navbar nav ul img {
+    width: 20%;
+    position: absolute;
+    z-index: 9;
+    right: 6rem;
+    top: 13rem;
+    filter: saturate(80%);
+
+}
+
+
+.navbar nav ul li {
+    z-index: 99;
+    width: 300px;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 1rem;
+    transform-origin: top right;
+    border-radius: 0.2rem;
+    transition: 0.3s;
+}
+
+.navbar nav ul li:hover{
+    background-color: var(--black-p);
+    color: var(--yellow-p);
+}
+
+#main header {
+    padding: 0.8rem 2rem;
+    color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: top right;
+}
+
+#main header h2 {
+    font-family: var(--barlow-font-family);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2.2rem;
+
+}
+
+#main header .menu {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+#main header .menu span {
+    text-transform: uppercase;
+    font-family: var(--pop-font-family);
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+}
+
+#main header .menu .cir {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--light);
+    border-radius: 50%;
+    position: relative;
+}
+
+#main header .menu .cir div {
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--yellow-p);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section {
+    padding: 5rem 3.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+section div {
+    /* position: relative; */
+    color: var(--light);
+
+
+}
+
+section div h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--barlow-font-family);
+    font-size: 30rem;
+    text-transform: uppercase;
+    z-index: 1;
+    opacity: 0.1;
+    text-shadow: 15px 14px 1px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in;
+
+}
+
+section div .car_d {
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+section div .car_d .car_img {
+    width: 100%;
+}
+
+section div .car_d .car_img img {
+    width: 100%;
+
+}
+
+section div .car_d .car_text {
+    font-family: var(--pop-font-family);
+    width: 900px;
+
+}
+
+section div .car_d .car_text span {
+    color: var(--yellow-p);
+    letter-spacing: 0.1rem;
+}
+
+section div .car_d .car_text h2 {
+    margin: 0.6rem 0;
+    font-family: var(--barlow-font-family);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+section div .car_d .car_text p {
+    line-height: 2rem;
+    font-size: 0.8rem;
+    /* width: 500px; */
+}
+
+section div .car_d .car_text button {
+    padding: 0.6rem 2rem;
+    border-radius: 0.1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    border: none;
+    background-color: var(--yellow-p);
+    cursor: pointer;
+    letter-spacing: 0.05rem;
+    color: var(--black-p);
+    font-family: var(--pop-font-family);
+    transition: 0.3s;
+}
+
+section div .car_d .car_text button:hover {
+    background-color: #bea200;
+}
+
+.pages {
+    display: flex;
+    font-family: var(--barlow-font-family);
+    gap: 0.2rem;
+    align-items: start;
+    flex-direction: column;
+    position: fixed;
+    left: 3.5rem;
+    top: 12rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 1.3rem;
+
+    /* justify-content: end; */
+    /* margin: 11.6rem 30rem; */
+    /* padding: 0.5rem; */
+}
+
+.pages .page {
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 0.8rem 0.9rem;
+    letter-spacing: 0.1rem;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.pages .page:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.active {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+
+
+}
+
+.icons {
+    color: var(--light);
+    position: fixed;
+    right: 3.5rem;
+    bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons div {
+    margin: 1rem 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icons .line {
+    width: fit-content;
+    height: 120px;
+    background-color: var(--light);
+}
+.icons div:hover {
+    color: var(--yellow-p);
+}
+
+@media (width<700px) {
+    #main header {
+        padding: 0.5rem 1rem;
+    }
+
+    .pages {
+
+        flex-direction: row;
+
+        left: 1.5rem;
+        top: 33.5rem;
+            /* justify-content: end; */
+            /* margin: 11.6rem 30rem; */
+            /* padding: 0.5rem; */
+    }
+
+    .pages .page {
+        width: 40px;
+        height: 40px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .active {
+        width: 40px;
+        height: 40px;
+    }
+
+    section {
+        margin-top: 9rem;
+    }
+
+    section div h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--barlow-font-family);
+        font-size: 10rem;
+        text-transform: uppercase;
+        z-index: 1;
+        opacity: 0.1;
+        text-shadow: 15px 14px 1px rgba(0, 0, 0, 1);
+        transition: all 0.3s ease-in;
+
+    }
+
+    section div .car_d {
+
+
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    section div .car_d .car_img {
+        width: 70%;
+    }
+
+    section div .car_d .car_img img {
+        width: 100%;
+
+    }
+
+    section div .car_d .car_text {
+        font-family: var(--pop-font-family);
+        width: 320px;
+        margin-left: 2rem;
+
+    }
+
+    section div .car_d .car_text h2 {
+
+        font-size: 3rem;
+    }
+
+    .icons {
+        right: 0rem;
+        bottom: 0rem;
+    }
+
+    #loader .l .l_img{
+        width: 100px;
+        
+        transform: translate(40%,-5%);
+        
+    }
+    
+    #loader .l .l_img img{
+        
+        width: 50%;
+        /* transform: rotate(90deg); */
+    }
+    #loader .l .per{
+        font-size: 1.2rem;
+        
+    
+    }
+    #loader .l .per .l_line{
+        /* width: 0vw; */
+        height: 3px;
+    }
+    
+
+}
